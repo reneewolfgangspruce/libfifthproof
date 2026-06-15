@@ -1,3 +1,3 @@
-module dns_resolver_4041e2
+module dns_resolver_27b0e5
 
 go 1.19
